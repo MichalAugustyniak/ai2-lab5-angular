@@ -1,0 +1,27 @@
+<h1>Current</h1>
+<a href="/current-tasks">Tasks</a>&nbsp;&nbsp;&nbsp;<a href="/archive-tasks">Archive</a>
+<form name="newTask" (ngSubmit)="addBtnClick()">
+  <label for="title">New task: </label>
+  <input id="title" [(ngModel)]="newTask.title" name="title">
+  &nbsp;
+  <label for="deadline">Deadline: </label>
+  <input id="deadline" type="date" name="deadline">
+  &nbsp;
+  <button type="submit">Save</button>
+</form>
+<ul>
+  <li *ngFor="let task of taskList; let index = index">
+    <div style="width: 60%; margin-right: 20%">
+      <div style="display: flex; justify-content: center; align-items: center">
+        <div style="width: 50%">
+          <p>{{task.deadline}}</p>
+          <p>{{task.title}}</p>
+        </div>
+        <div style="width: 50%">
+          <input type="checkbox" (change)="switchTaskChanged(task)" [checked]="task.completed" style="width: 50%;">
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<button (click)="archiveCompleted()">Archive selected</button>

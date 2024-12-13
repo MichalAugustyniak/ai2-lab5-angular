@@ -1,0 +1,18 @@
+<h1>Archive</h1>
+<a href="/current-tasks">Tasks</a>&nbsp;&nbsp;&nbsp;<a href="/archive-tasks">Archive</a>
+<ul>
+  <li *ngFor="let task of taskList">
+    <div style="width: 60%; margin-right: 20%">
+      <div style="display: flex; justify-content: center; align-items: center">
+        <div style="width: 50%">
+          <p>{{task.deadline}}</p>
+          <p>{{task.title}}</p>
+        </div>
+        &nbsp;
+        <div style="width: 50%">
+          <button (click)="delete(task)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
