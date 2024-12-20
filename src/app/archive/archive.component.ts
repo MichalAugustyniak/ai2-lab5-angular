@@ -3,12 +3,16 @@ import {TasksService} from '../tasks.service';
 import {Task} from '../Task';
 import {FormsModule} from '@angular/forms';
 import {NgForOf} from '@angular/common';
+import {MatButton} from '@angular/material/button';
+import {MatCard} from '@angular/material/card';
 
 @Component({
   selector: 'app-archive',
   imports: [
     FormsModule,
-    NgForOf
+    NgForOf,
+    MatButton,
+    MatCard
   ],
   templateUrl: './archive.component.html',
   styleUrl: './archive.component.css'

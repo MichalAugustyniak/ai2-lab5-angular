@@ -1,17 +1,37 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {TasksService} from '../tasks.service';
 import {Task} from '../Task';
 import {FormsModule} from '@angular/forms';
 import {NgForOf} from '@angular/common';
+import {MatButton} from '@angular/material/button';
+import {MatCheckbox} from '@angular/material/checkbox';
+import {MatFormField, MatSuffix} from '@angular/material/form-field';
+import {MatInput} from '@angular/material/input';
+import {MatDatepicker, MatDatepickerInput, MatDatepickerToggle} from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {provideNativeDateAdapter} from '@angular/material/core';
+import {MatCard} from '@angular/material/card';
+
 
 @Component({
   selector: 'app-tasks',
   imports: [
     FormsModule,
-    NgForOf
+    NgForOf,
+    MatButton,
+    MatCheckbox,
+    MatFormField,
+    MatInput,
+    MatFormFieldModule,
+    MatDatepickerInput,
+    MatDatepickerToggle,
+    MatSuffix,
+    MatDatepicker,
+    MatCard
   ],
   templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.css'
+  styleUrl: './tasks.component.css',
+  providers: [provideNativeDateAdapter()]
 })
 export class TasksComponent {
 
@@ -48,6 +68,15 @@ export class TasksComponent {
         });
       }
     }
-    this.ngOnInit();
+    //this.ngOnInit();
+  }
+
+  public isAnyCompleted(): boolean {
+    for (const task of this.taskList) {
+      if (task.completed) {
+        return true;
+      }
+    }
+    return false;
   }
 }

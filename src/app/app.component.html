@@ -1,5 +1,9 @@
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column">
   <h1>Task list</h1>
   <br>
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link [routerLink]="'/current-tasks'" [active]="activeUrl() === '/current-tasks'">Tasks</a>
+    <a mat-tab-link [routerLink]="'/archive-tasks'" [active]="activeUrl() === '/archive-tasks'">Archive</a>
+  </nav>
   <router-outlet />
 </div>
