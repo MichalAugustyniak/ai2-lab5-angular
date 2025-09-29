@@ -17,6 +17,5 @@ Once the server is running, open your browser and navigate to `http://localhost:
 2. Angular Material
 
 ## Screenshots
-<img width="945" height="317" alt="tasklist" src="https://github.com/user-attachments/assets/c92b26d5-0794-4975-8dee-bfa2421d12ca" />
-<img width="945" height="333" alt="tasklist" src="https://github.com/user-attachments/assets/8cb2a06d-bee6-4d8e-a72a-6898d4a9e1fb" />
-<img width="945" height="559" alt="tasklist" src="https://github.com/user-attachments/assets/7ccb3964-3e5a-4f52-939e-8d6f02f2c43f" />
+<img width="945" height="353" alt="tasklist" src="https://github.com/user-attachments/assets/48452b2c-4139-41b4-a326-2e62ca2bb481" />
+<img width="945" height="280" alt="tasklist" src="https://github.com/user-attachments/assets/a71342c4-6f41-4a01-b08a-5cc7d169cc84" />
